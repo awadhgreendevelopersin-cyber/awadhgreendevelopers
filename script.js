@@ -1,301 +1,299 @@
-/*=====================================
-AWADH GREEN DEVELOPERS
-script.js PART 1
-=====================================*/
+/*=========================================
+ AWADH GREEN DEVELOPERS
+ script.js
+ PART 8A
+=========================================*/
 
-//==================
-// Sticky Header
-//==================
+/*==========================
+Sticky Header
+===========================*/
 
 const header = document.querySelector(".header");
 
 window.addEventListener("scroll", () => {
 
-if(window.scrollY > 80){
+    if (window.scrollY > 80) {
 
-header.classList.add("sticky");
+        header.style.background = "#081522";
+        header.style.padding = "0";
 
-}else{
+    } else {
 
-header.classList.remove("sticky");
+        header.style.background = "rgba(8,21,34,.90)";
 
-}
-
-});
-
-//==================
-// Smooth Scroll
-//==================
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-
-anchor.addEventListener("click",function(e){
-
-e.preventDefault();
-
-document.querySelector(this.getAttribute("href"))
-
-.scrollIntoView({
-
-behavior:"smooth"
+    }
 
 });
 
-});
+
+/*==========================
+Smooth Scroll
+===========================*/
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href"))
+        .scrollIntoView({
+
+            behavior: "smooth"
+
+        });
+
+    });
 
 });
 
-//==================
-// Counter Animation
-//==================
 
-const counters = document.querySelectorAll(".stat-card h2");
+/*==========================
+Active Navigation
+===========================*/
 
-const speed = 100;
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav ul li a");
 
-counters.forEach(counter=>{
+window.addEventListener("scroll", () => {
 
-const update=()=>{
+    let current = "";
 
-const target = +counter.innerText.replace(/\D/g,'');
+    sections.forEach(section => {
 
-const count = +counter.getAttribute("data-count") || 0;
+        const sectionTop = section.offsetTop - 120;
 
-const inc = Math.ceil(target/speed);
+        if (pageYOffset >= sectionTop) {
 
-if(count<target){
+            current = section.getAttribute("id");
 
-counter.setAttribute("data-count",count+inc);
+        }
 
-counter.innerText=(count+inc)+"+";
+    });
 
-setTimeout(update,20);
+    navLinks.forEach(link => {
 
-}else{
+        link.classList.remove("active");
 
-counter.innerText=target+"+";
+        if (link.getAttribute("href") == "#" + current) {
 
-}
+            link.classList.add("active");
 
-}
+        }
 
-update();
-
-});
-
-//==================
-// Scroll Reveal
-//==================
-
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
+    });
 
 });
+
+
+/*==========================
+Scroll Animation
+===========================*/
+
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.15
 
 });
 
 document.querySelectorAll(
 
-".service-card,.why-card,.project,.review-card"
+".service-card,.stat-card,.why-card,.feature,.project,.review-card"
 
-).forEach(el=>observer.observe(el));
+).forEach(el => {
 
-//==================
-// Floating Buttons
-//==================
+    el.classList.add("hidden");
 
-const whatsapp=document.createElement("a");
+    observer.observe(el);
 
-whatsapp.href="https://wa.me/918423948053";
+});
 
-whatsapp.className="whatsapp-float";
 
-whatsapp.innerHTML='<i class="fab fa-whatsapp"></i>';
+/*==========================
+Counter Animation
+===========================*/
 
-document.body.appendChild(whatsapp);
+const counters = document.querySelectorAll(".counter");
 
-const call=document.createElement("a");
+const speed = 250;
 
-call.href="tel:8423948053";
+const counterObserver = new IntersectionObserver(entries => {
 
-call.className="call-float";
+entries.forEach(entry => {
 
-call.innerHTML='<i class="fa-solid fa-phone"></i>';
+if(entry.isIntersecting){
 
-document.body.appendChild(call);/*=====================================
-SOLAR CALCULATOR
-=====================================*/
+const updateCounter=(counter)=>{
 
-const calculateBtn = document.getElementById("calculateBtn");
+const target=+counter.dataset.target;
 
-if(calculateBtn){
+const count=+counter.innerText;
 
-calculateBtn.addEventListener("click",()=>{
+const inc=target/speed;
 
-const bill = parseFloat(document.getElementById("bill").value);
+if(count<target){
 
-const result = document.getElementById("result");
+counter.innerText=Math.ceil(count+inc);
 
-if(isNaN(bill) || bill<=0){
-
-result.innerHTML="Please enter a valid electricity bill.";
-
-return;
-
-}
-
-let kw=1;
-
-if(bill<1500){
-
-kw=1;
-
-}else if(bill<3000){
-
-kw=2;
-
-}else if(bill<5000){
-
-kw=3;
-
-}else if(bill<8000){
-
-kw=5;
-
-}else if(bill<12000){
-
-kw=8;
+setTimeout(()=>updateCounter(counter),15);
 
 }else{
 
-kw=10;
+counter.innerText=target;
 
 }
 
-const saving=Math.round(bill*0.85);
+}
 
-const price=kw*65000;
+updateCounter(entry.target);
 
-result.innerHTML=`
-
-<h3>Recommended Plant : ${kw} kW</h3>
-
-<p>Estimated Cost : ₹${price.toLocaleString()}</p>
-
-<p>Monthly Saving : ₹${saving.toLocaleString()}</p>
-
-<p>Estimated Annual Saving : ₹${(saving*12).toLocaleString()}</p>
-
-`;
+}
 
 });
 
-}
+});
 
-/*=====================================
-EMI CALCULATOR
-=====================================*/
+counters.forEach(counter=>{
 
-const emiBtn=document.getElementById("emiBtn");
-
-if(emiBtn){
-
-emiBtn.addEventListener("click",()=>{
-
-const loan=parseFloat(document.getElementById("loan").value);
-
-const rate=parseFloat(document.getElementById("rate").value);
-
-const year=parseFloat(document.getElementById("year").value);
-
-const output=document.getElementById("emiResult");
-
-if(isNaN(loan)||isNaN(rate)||isNaN(year)){
-
-output.innerHTML="Enter valid values.";
-
-return;
-
-}
-
-const r=rate/12/100;
-
-const n=year*12;
-
-const emi=(loan*r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
-
-output.innerHTML=`
-
-<h3>
-
-Monthly EMI
-
-</h3>
-
-<h2>
-
-₹${Math.round(emi).toLocaleString()}
-
-</h2>
-
-<p>
-
-Loan Amount : ₹${loan.toLocaleString()}
-
-</p>
-
-<p>
-
-Interest : ${rate}%
-
-</p>
-
-<p>
-
-Duration : ${year} Years
-
-</p>
-
-`;
+counterObserver.observe(counter);
 
 });
 
-}
 
-/*=====================================
-BACK TO TOP BUTTON
-=====================================*/
-
-const topBtn=document.createElement("button");
-
-topBtn.innerHTML="↑";
-
-topBtn.className="topButton";
-
-document.body.appendChild(topBtn);
+/*==========================
+Navbar Shadow
+===========================*/
 
 window.addEventListener("scroll",()=>{
 
-if(window.scrollY>500){
+if(window.scrollY>30){
 
-topBtn.style.display="block";
+header.style.boxShadow="0 12px 30px rgba(0,0,0,.20)";
 
 }else{
 
-topBtn.style.display="none";
+header.style.boxShadow="none";
+
+}
+
+});/*=========================================
+ AWADH GREEN DEVELOPERS
+ script.js
+ PART 8B
+=========================================*/
+
+
+/*==========================
+FAQ Accordion
+===========================*/
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", () => {
+
+        faqItems.forEach(faq => {
+
+            if (faq !== item) {
+
+                faq.classList.remove("active");
+
+            }
+
+        });
+
+        item.classList.toggle("active");
+
+    });
+
+});
+
+
+/*==========================
+Mobile Menu
+===========================*/
+
+const menuBtn = document.querySelector(".menu-btn");
+const nav = document.querySelector("nav");
+
+if(menuBtn){
+
+menuBtn.addEventListener("click",()=>{
+
+nav.classList.toggle("show");
+
+menuBtn.classList.toggle("active");
+
+});
+
+}
+
+
+/*==========================
+Close Menu After Click
+===========================*/
+
+document.querySelectorAll("nav a").forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+if(nav){
+
+nav.classList.remove("show");
+
+}
+
+if(menuBtn){
+
+menuBtn.classList.remove("active");
 
 }
 
 });
 
-topBtn.onclick=()=>{
+});
+
+
+/*==========================
+Scroll To Top Button
+===========================*/
+
+const topBtn=document.querySelector(".scroll-top");
+
+window.addEventListener("scroll",()=>{
+
+if(!topBtn) return;
+
+if(window.scrollY>500){
+
+topBtn.classList.add("show");
+
+}else{
+
+topBtn.classList.remove("show");
+
+}
+
+});
+
+if(topBtn){
+
+topBtn.addEventListener("click",()=>{
 
 window.scrollTo({
 
@@ -305,146 +303,50 @@ behavior:"smooth"
 
 });
 
-};/*=====================================
-MOBILE MENU
-=====================================*/
-
-const menuBtn = document.querySelector(".menu-btn");
-const nav = document.querySelector("nav");
-
-if(menuBtn){
-
-menuBtn.addEventListener("click",()=>{
-
-nav.classList.toggle("active");
-
 });
 
 }
 
-/*=====================================
-ACTIVE MENU ON SCROLL
-=====================================*/
 
-const sections=document.querySelectorAll("section");
+/*==========================
+Image Hover Effect
+===========================*/
 
-const navLinks=document.querySelectorAll("nav ul li a");
+document.querySelectorAll(".project img").forEach(img=>{
 
-window.addEventListener("scroll",()=>{
+img.addEventListener("mousemove",(e)=>{
 
-let current="";
-
-sections.forEach(section=>{
-
-const top=section.offsetTop-120;
-
-const height=section.clientHeight;
-
-if(pageYOffset>=top){
-
-current=section.getAttribute("id");
-
-}
+img.style.transform="scale(1.12)";
 
 });
 
-navLinks.forEach(link=>{
+img.addEventListener("mouseleave",()=>{
 
-link.classList.remove("active");
-
-if(link.getAttribute("href")==="#"+current){
-
-link.classList.add("active");
-
-}
+img.style.transform="scale(1)";
 
 });
 
 });
 
-/*=====================================
-PROJECT FILTER
-=====================================*/
 
-const filters=document.querySelectorAll(".filter-btn");
+/*==========================
+Floating Buttons Pulse
+===========================*/
 
-const projects=document.querySelectorAll(".project");
+setInterval(()=>{
 
-filters.forEach(button=>{
+document.querySelectorAll(".whatsapp-float,.call-float").forEach(btn=>{
 
-button.addEventListener("click",()=>{
-
-filters.forEach(btn=>btn.classList.remove("active"));
-
-button.classList.add("active");
-
-const filter=button.dataset.filter;
-
-projects.forEach(project=>{
-
-if(filter==="all"){
-
-project.style.display="block";
-
-}else{
-
-project.style.display=
-
-project.classList.contains(filter)
-
-?"block":"none";
-
-}
+btn.classList.toggle("pulse");
 
 });
 
-});
+},1000);
 
-});
 
-/*=====================================
-CONTACT FORM VALIDATION
-=====================================*/
-
-const form=document.querySelector("form");
-
-if(form){
-
-form.addEventListener("submit",(e)=>{
-
-e.preventDefault();
-
-const name=form.querySelector("input[type='text']").value.trim();
-
-const phone=form.querySelector("input[type='tel']").value.trim();
-
-if(name.length<3){
-
-alert("Please enter your name.");
-
-return;
-
-}
-
-if(phone.length!=10){
-
-alert("Enter valid mobile number.");
-
-return;
-
-}
-
-alert("Thank you! Our team will contact you soon.");
-
-form.reset();
-
-});
-
-}
-
-/*=====================================
-PRELOADER
-=====================================*/
+/*==========================
+Preloader
+===========================*/
 
 window.addEventListener("load",()=>{
 
@@ -458,12 +360,23 @@ setTimeout(()=>{
 
 loader.style.display="none";
 
-},600);
+},500);
 
 }
 
 });
 
-/*=====================================
-END
-=====================================*/
+
+/*==========================
+Console Message
+===========================*/
+
+console.log(
+"%cAwadh Green Developers",
+"color:#ff7a00;font-size:24px;font-weight:bold;"
+);
+
+console.log(
+"%cProfessional Solar Website Loaded Successfully",
+"color:green;font-size:14px;"
+);

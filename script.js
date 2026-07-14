@@ -380,3 +380,33 @@ console.log(
 "%cProfessional Solar Website Loaded Successfully",
 "color:green;font-size:14px;"
 );
+/*=========================================
+PART 8C
+=========================================*/
+
+window.addEventListener("load", () => {
+
+    document.body.classList.add("loaded");
+
+});
+
+
+document.addEventListener("contextmenu", function(e){
+
+    e.preventDefault();
+
+});
+
+
+document.addEventListener("keydown", function(e){
+
+    if(e.key === "F12"){
+
+        e.preventDefault();
+
+    }
+
+});
+
+
+console.log("Website Developed By Awadh Green Developers");

@@ -1,1 +1,1 @@
-Replace index.html and style.css. Upload logo file too.
+V6 update

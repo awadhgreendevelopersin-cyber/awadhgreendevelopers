@@ -1,3 +1,1 @@
-Awadh Green Developers starter website.
-Upload these files to your GitHub repository.
-Replace placeholder text and add your own images later.
+Version 2 Part 1. Replace existing index.html, style.css, script.js.

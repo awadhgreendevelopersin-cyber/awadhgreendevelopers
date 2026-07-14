@@ -4,62 +4,69 @@
 <head>
 
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Awadh Green Developers | Solar Energy Solutions</title>
+<title>Awadh Green Developers | Premium Solar Energy Company</title>
 
-<meta name="description"
-content="Awadh Green Developers provides On Grid, Off Grid, Hybrid and Commercial Solar Solutions across Uttar Pradesh.">
+<meta name="description" content="Awadh Green Developers provides Residential, Commercial, Industrial, On-Grid, Hybrid & Off-Grid Solar Solutions across Uttar Pradesh.">
 
-<meta name="keywords"
-content="Solar Panel, On Grid, Hybrid Solar, Commercial Solar, PM Surya Ghar">
+<meta name="keywords" content="Solar Panel, Rooftop Solar, PM Surya Ghar, Hybrid Solar, Commercial Solar">
 
-<meta name="author"
-content="Awadh Green Developers">
+<meta name="author" content="Awadh Green Developers">
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+<meta name="theme-color" content="#ff7a00">
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
+<link rel="icon" href="images/logo.webp">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-<link rel="stylesheet"
-href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<!--================ HEADER START ================-->
+<!--================ PRELOADER ================-->
+
+<div class="loader">
+
+<div class="loader-ring"></div>
+
+</div>
+
+<!--================ HEADER ================-->
 
 <header class="header">
 
 <div class="container">
 
-<div class="logo">
+<a href="#" class="logo">
 
-<img src="images/logo.webp" alt="Awadh Green Developers">
+<img src="images/logo.webp" alt="Awadh Green Developers Logo">
 
-<h2>
+<div>
 
-Awadh Green Developers
+<h2>Awadh Green Developers</h2>
 
-</h2>
+<span>Powering Your Future</span>
 
 </div>
 
-<nav>
+</a>
+
+<nav class="navbar">
 
 <ul>
 
-<li><a href="#">Home</a></li>
+<li><a href="#home">Home</a></li>
 
 <li><a href="#about">About</a></li>
 
@@ -69,16 +76,17 @@ Awadh Green Developers
 
 <li><a href="#calculator">Calculator</a></li>
 
+<li><a href="#faq">FAQ</a></li>
+
 <li><a href="#contact">Contact</a></li>
 
 </ul>
 
 </nav>
 
-<div class="header-btn">
+<div class="header-buttons">
 
-<a href="tel:8423948053"
-class="call-btn">
+<a href="tel:+918423948053" class="call-btn">
 
 <i class="fa-solid fa-phone"></i>
 
@@ -86,8 +94,7 @@ class="call-btn">
 
 </a>
 
-<a href="https://wa.me/918423948053"
-class="whatsapp-btn">
+<a href="https://wa.me/918423948053" target="_blank" class="whatsapp-btn">
 
 <i class="fa-brands fa-whatsapp"></i>
 
@@ -97,19 +104,31 @@ WhatsApp
 
 </div>
 
+<div class="menu-btn">
+
+<span></span>
+
+<span></span>
+
+<span></span>
+
+</div>
+
 </div>
 
 </header>
 
 <!--================ HERO SECTION ================-->
 
-<section class="hero">
+<section id="home" class="hero">
 
 <div class="overlay"></div>
 
+<div class="container">
+
 <div class="hero-content">
 
-<span>
+<span class="hero-tag">
 
 Trusted Solar EPC Company
 
@@ -117,45 +136,30 @@ Trusted Solar EPC Company
 
 <h1>
 
-Powering India
+Power Your Home With
 
-With
-
-Clean
-
-Solar Energy
+<span>Clean Solar Energy</span>
 
 </h1>
 
 <p>
 
-Premium Solar Solutions
-
-For Homes,
-
-Commercial Buildings,
-
-Factories
-
-And Industries.
-
-Serving 45+ Cities Across Uttar Pradesh.
+Awadh Green Developers provides premium Residential,
+Commercial and Industrial Solar Solutions with complete
+installation, subsidy assistance and after-sales support
+across Uttar Pradesh.
 
 </p>
 
 <div class="hero-buttons">
 
-<a href="#contact"
+<a href="#contact" class="primary-btn">
 
-class="primary-btn">
-
-Get Free Quote
+Get Free Survey
 
 </a>
 
-<a href="#calculator"
-
-class="secondary-btn">
+<a href="#calculator" class="secondary-btn">
 
 Calculate Savings
 
@@ -165,61 +169,190 @@ Calculate Savings
 
 </div>
 
-</section>
+</div>
 
-<!--================ STATS ================-->
+</section><!--================ STATS =================-->
 
 <section class="stats">
 
+<div class="container">
+
 <div class="stat-card">
 
-<h2>500+</h2>
+<h2 class="counter" data-target="500">0</h2>
 
-<p>
-
-Successful Installations
-
-</p>
+<p>Successful Installations</p>
 
 </div>
 
 <div class="stat-card">
 
-<h2>45+</h2>
+<h2 class="counter" data-target="45">0</h2>
 
-<p>
-
-Cities Served
-
-</p>
+<p>Cities Served</p>
 
 </div>
 
 <div class="stat-card">
 
-<h2>25 Years</h2>
+<h2>25+</h2>
 
-<p>
-
-Performance Warranty*
-
-</p>
+<p>Years Panel Performance Warranty</p>
 
 </div>
 
 <div class="stat-card">
 
-<h2>24×7</h2>
+<h2 class="counter" data-target="98">0</h2>
 
-<p>
+<p>% Customer Satisfaction</p>
 
-Customer Support
-
-</p>
+</div>
 
 </div>
 
 </section>
+
+<!--================ TRUSTED BRANDS =================-->
+
+<section class="brands">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>OUR PARTNERS</span>
+
+<h2>Trusted Brands We Work With</h2>
+
+<p>
+
+We install high-quality products from India's leading solar brands.
+
+</p>
+
+</div>
+
+<div class="brand-grid">
+
+<div class="brand-box">
+
+<img src="images/adani.png" alt="Adani Solar">
+
+</div>
+
+<div class="brand-box">
+
+<img src="images/waaree.png" alt="Waaree">
+
+</div>
+
+<div class="brand-box">
+
+<img src="images/tata.png" alt="Tata Power Solar">
+
+</div>
+
+<div class="brand-box">
+
+<img src="images/havells.png" alt="Havells">
+
+</div>
+
+<div class="brand-box">
+
+<img src="images/polycab.png" alt="Polycab">
+
+</div>
+
+<div class="brand-box">
+
+<img src="images/deye.png" alt="Deye">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!--================ FEATURES =================-->
+
+<section class="features-strip">
+
+<div class="container">
+
+<div class="feature-box">
+
+<i class="fa-solid fa-award"></i>
+
+<h3>Premium Quality</h3>
+
+<p>Tier-1 Solar Products</p>
+
+</div>
+
+<div class="feature-box">
+
+<i class="fa-solid fa-bolt"></i>
+
+<h3>Fast Installation</h3>
+
+<p>Professional Engineering Team</p>
+
+</div>
+
+<div class="feature-box">
+
+<i class="fa-solid fa-wallet"></i>
+
+<h3>Easy Finance</h3>
+
+<p>EMI & Loan Assistance</p>
+
+</div>
+
+<div class="feature-box">
+
+<i class="fa-solid fa-headset"></i>
+
+<h3>24×7 Support</h3>
+
+<p>Always Ready To Help</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!--================ FLOATING BUTTONS =================-->
+
+<a href="https://wa.me/918423948053"
+
+class="whatsapp-float"
+
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<a href="tel:+918423948053"
+
+class="call-float">
+
+<i class="fas fa-phone"></i>
+
+</a>
+
+<button class="scroll-top">
+
+<i class="fas fa-arrow-up"></i>
+
+</button>
+
 <!--================ ABOUT SECTION =================-->
 
 <section id="about" class="about">
@@ -228,7 +361,7 @@ Customer Support
 
 <div class="about-left">
 
-<span class="section-tag">
+<span>
 
 ABOUT COMPANY
 
@@ -236,31 +369,29 @@ ABOUT COMPANY
 
 <h2>
 
-Leading Solar Energy Company
-
-In Uttar Pradesh
+Leading Solar Energy Company In Uttar Pradesh
 
 </h2>
 
 <p>
 
-Awadh Green Developers is committed to providing premium quality solar energy solutions for residential, commercial and industrial customers.
+Awadh Green Developers delivers reliable residential,
+commercial and industrial solar power solutions.
+From free site surveys to installation, net metering,
+government subsidy assistance and after-sales support,
+we provide complete end-to-end solar services.
 
-Our mission is to reduce electricity bills while promoting clean and renewable energy.
-
-</p>
-
-<div class="about-features">
+</p><div class="about-features">
 
 <div class="feature">
 
-<i class="fa-solid fa-solar-panel"></i>
+<i class="fas fa-solar-panel"></i>
 
 <div>
 
 <h4>Premium Solar Panels</h4>
 
-<p>Tier-1 Solar Modules</p>
+<p>High efficiency Tier-1 solar modules with long life.</p>
 
 </div>
 
@@ -268,13 +399,13 @@ Our mission is to reduce electricity bills while promoting clean and renewable e
 
 <div class="feature">
 
-<i class="fa-solid fa-bolt"></i>
+<i class="fas fa-certificate"></i>
 
 <div>
 
-<h4>Fast Installation</h4>
+<h4>Government Approved</h4>
 
-<p>Quick & Professional Team</p>
+<p>PM Surya Ghar subsidy & net metering assistance.</p>
 
 </div>
 
@@ -282,15 +413,27 @@ Our mission is to reduce electricity bills while promoting clean and renewable e
 
 <div class="feature">
 
-<i class="fa-solid fa-award"></i>
+<i class="fas fa-user-shield"></i>
 
 <div>
 
-<h4>Quality Assurance</h4>
+<h4>Experienced Engineers</h4>
 
-<p>Reliable Products & Support</p>
+<p>Professional installation with complete safety standards.</p>
 
 </div>
+
+</div>
+
+<div class="feature">
+
+<i class="fas fa-headset"></i>
+
+<div>
+
+<h4>After Sales Support</h4>
+
+<p>Fast service and maintenance whenever you need it.</p>
 
 </div>
 
@@ -298,7 +441,7 @@ Our mission is to reduce electricity bills while promoting clean and renewable e
 
 <a href="#contact" class="primary-btn">
 
-Request Free Survey
+Book Free Site Visit
 
 </a>
 
@@ -306,9 +449,7 @@ Request Free Survey
 
 <div class="about-right">
 
-<img src="images/about.jpg"
-
-alt="Solar Plant">
+<img src="images/about.jpg" alt="Awadh Green Developers">
 
 </div>
 
@@ -324,19 +465,9 @@ alt="Solar Plant">
 
 <div class="section-title">
 
-<span>
+<span>WHY CHOOSE US</span>
 
-WHY CHOOSE US
-
-</span>
-
-<h2>
-
-Why Customers Trust
-
-Awadh Green Developers
-
-</h2>
+<h2>Why Customers Trust Awadh Green Developers</h2>
 
 </div>
 
@@ -344,81 +475,41 @@ Awadh Green Developers
 
 <div class="why-card">
 
-<i class="fa-solid fa-solar-panel"></i>
+<i class="fas fa-bolt"></i>
 
-<h3>
+<h3>Latest Technology</h3>
 
-Latest Solar Technology
-
-</h3>
-
-<p>
-
-High Efficiency Solar Systems
-
-With Better Performance.
-
-</p>
+<p>Modern solar systems with maximum efficiency and performance.</p>
 
 </div>
 
 <div class="why-card">
 
-<i class="fa-solid fa-shield-halved"></i>
+<i class="fas fa-award"></i>
 
-<h3>
+<h3>Quality Products</h3>
 
-25 Year Warranty
-
-</h3>
-
-<p>
-
-Long Lasting Performance
-
-With Manufacturer Warranty.
-
-</p>
+<p>We install trusted brands with manufacturer warranty.</p>
 
 </div>
 
 <div class="why-card">
 
-<i class="fa-solid fa-users"></i>
+<i class="fas fa-wallet"></i>
 
-<h3>
+<h3>Affordable Pricing</h3>
 
-Experienced Engineers
-
-</h3>
-
-<p>
-
-Professional Installation
-
-And Quality Service.
-
-</p>
+<p>Competitive pricing with EMI and finance options.</p>
 
 </div>
 
 <div class="why-card">
 
-<i class="fa-solid fa-headset"></i>
+<i class="fas fa-tools"></i>
 
-<h3>
+<h3>Complete EPC</h3>
 
-24×7 Support
-
-</h3>
-
-<p>
-
-Always Available
-
-For Customer Assistance.
-
-</p>
+<p>Design, installation, subsidy, net metering and maintenance.</p>
 
 </div>
 
@@ -428,61 +519,7 @@ For Customer Assistance.
 
 </section>
 
-<!--================ PM SURYA GHAR =================-->
-
-<section class="subsidy">
-
-<div class="container">
-
-<div class="subsidy-left">
-
-<h2>
-
-PM Surya Ghar
-
-Muft Bijli Yojana
-
-</h2>
-
-<p>
-
-Get Government Subsidy
-
-On Residential Rooftop
-
-Solar Systems.
-
-Our team helps you with
-
-Complete Documentation,
-
-Installation
-
-And Net Metering.
-
-</p>
-
-<a href="#contact"
-
-class="primary-btn">
-
-Apply Now
-
-</a>
-
-</div>
-
-<div class="subsidy-right">
-
-<img src="images/subsidy.png"
-
-alt="PM Surya Ghar">
-
-</div>
-
-</div>
-
-</section><!--================ OUR SERVICES =================-->
+<!--================ SERVICES =================-->
 
 <section id="services" class="services">
 
@@ -496,7 +533,7 @@ alt="PM Surya Ghar">
 
 <p>
 
-Premium solar solutions for homes, businesses, industries and institutions.
+Reliable solar solutions for homes, businesses and industries.
 
 </p>
 
@@ -508,7 +545,7 @@ Premium solar solutions for homes, businesses, industries and institutions.
 
 <div class="icon">
 
-<i class="fa-solid fa-house"></i>
+<i class="fas fa-house"></i>
 
 </div>
 
@@ -516,11 +553,11 @@ Premium solar solutions for homes, businesses, industries and institutions.
 
 <p>
 
-Reduce your electricity bill with rooftop solar systems for homes.
+Reduce your electricity bill with rooftop solar systems.
 
 </p>
 
-<a href="#contact">Learn More →</a>
+<a href="#contact">Know More</a>
 
 </div>
 
@@ -528,7 +565,7 @@ Reduce your electricity bill with rooftop solar systems for homes.
 
 <div class="icon">
 
-<i class="fa-solid fa-building"></i>
+<i class="fas fa-building"></i>
 
 </div>
 
@@ -536,11 +573,11 @@ Reduce your electricity bill with rooftop solar systems for homes.
 
 <p>
 
-Solar solutions for offices, malls, schools, hospitals and hotels.
+Solar systems for offices, schools, hospitals and hotels.
 
 </p>
 
-<a href="#contact">Learn More →</a>
+<a href="#contact">Know More</a>
 
 </div>
 
@@ -548,7 +585,7 @@ Solar solutions for offices, malls, schools, hospitals and hotels.
 
 <div class="icon">
 
-<i class="fa-solid fa-industry"></i>
+<i class="fas fa-industry"></i>
 
 </div>
 
@@ -556,11 +593,11 @@ Solar solutions for offices, malls, schools, hospitals and hotels.
 
 <p>
 
-High-capacity solar power plants for factories and industries.
+High-capacity solar plants for factories and industries.
 
 </p>
 
-<a href="#contact">Learn More →</a>
+<a href="#contact">Know More</a>
 
 </div>
 
@@ -568,7 +605,7 @@ High-capacity solar power plants for factories and industries.
 
 <div class="icon">
 
-<i class="fa-solid fa-battery-full"></i>
+<i class="fas fa-battery-full"></i>
 
 </div>
 
@@ -576,11 +613,11 @@ High-capacity solar power plants for factories and industries.
 
 <p>
 
-Solar systems with battery backup for uninterrupted power.
+Battery backup solar systems for uninterrupted power.
 
 </p>
 
-<a href="#contact">Learn More →</a>
+<a href="#contact">Know More</a>
 
 </div>
 
@@ -588,7 +625,7 @@ Solar systems with battery backup for uninterrupted power.
 
 <div class="icon">
 
-<i class="fa-solid fa-plug-circle-bolt"></i>
+<i class="fas fa-plug-circle-bolt"></i>
 
 </div>
 
@@ -596,11 +633,11 @@ Solar systems with battery backup for uninterrupted power.
 
 <p>
 
-Save more with net metering and government subsidy.
+Net metering enabled systems with government subsidy support.
 
 </p>
 
-<a href="#contact">Learn More →</a>
+<a href="#contact">Know More</a>
 
 </div>
 
@@ -608,21 +645,81 @@ Save more with net metering and government subsidy.
 
 <div class="icon">
 
-<i class="fa-solid fa-solar-panel"></i>
+<i class="fas fa-screwdriver-wrench"></i>
 
 </div>
 
-<h3>Solar Maintenance</h3>
+<h3>Maintenance</h3>
 
 <p>
 
-Cleaning, servicing and maintenance for better performance.
+Annual maintenance and cleaning for maximum efficiency.
 
 </p>
 
-<a href="#contact">Learn More →</a>
+<a href="#contact">Know More</a>
 
 </div>
+
+</div>
+
+</div>
+
+</section><!--================ PM SURYA GHAR =================-->
+
+<section class="subsidy">
+
+<div class="container">
+
+<div class="subsidy-left">
+
+<span class="section-tag">
+
+PM SURYA GHAR YOJANA
+
+</span>
+
+<h2>
+
+Get Government Subsidy
+On Rooftop Solar
+
+</h2>
+
+<p>
+
+Install a rooftop solar system under the PM Surya Ghar
+Muft Bijli Yojana and save thousands on your electricity
+bill every year. Our experts handle documentation,
+approval, subsidy application and net metering.
+
+</p>
+
+<ul class="subsidy-list">
+
+<li><i class="fas fa-check-circle"></i> Free Site Survey</li>
+
+<li><i class="fas fa-check-circle"></i> Subsidy Assistance</li>
+
+<li><i class="fas fa-check-circle"></i> Net Metering Support</li>
+
+<li><i class="fas fa-check-circle"></i> Fast Installation</li>
+
+</ul>
+
+<a href="#contact" class="primary-btn">
+
+Apply Now
+
+</a>
+
+</div>
+
+<div class="subsidy-right">
+
+<img src="images/subsidy.jpg"
+
+alt="PM Surya Ghar">
 
 </div>
 
@@ -640,7 +737,18 @@ Cleaning, servicing and maintenance for better performance.
 
 <span>OUR PROJECTS</span>
 
-<h2>Recent Installations</h2>
+<h2>
+
+Recent Solar Installations
+
+</h2>
+
+<p>
+
+Successfully completed residential, commercial and
+industrial solar projects across Uttar Pradesh.
+
+</p>
 
 </div>
 
@@ -648,7 +756,7 @@ Cleaning, servicing and maintenance for better performance.
 
 <div class="project">
 
-<img src="images/project1.jpg" alt="Project 1">
+<img src="images/project1.jpg" alt="Residential Project">
 
 <div class="project-info">
 
@@ -662,11 +770,25 @@ Cleaning, servicing and maintenance for better performance.
 
 <div class="project">
 
-<img src="images/project2.jpg" alt="Project 2">
+<img src="images/project2.jpg" alt="Commercial Project">
 
 <div class="project-info">
 
 <h3>50kW Commercial Plant</h3>
+
+<p>Lucknow</p>
+
+</div>
+
+</div>
+
+<div class="project">
+
+<img src="images/project3.jpg" alt="Industrial Project">
+
+<div class="project-info">
+
+<h3>100kW Industrial Plant</h3>
 
 <p>Sitapur</p>
 
@@ -676,11 +798,39 @@ Cleaning, servicing and maintenance for better performance.
 
 <div class="project">
 
-<img src="images/project3.jpg" alt="Project 3">
+<img src="images/project4.jpg" alt="Hybrid Solar">
 
 <div class="project-info">
 
-<h3>100kW Industrial Plant</h3>
+<h3>Hybrid Solar System</h3>
+
+<p>Shahjahanpur</p>
+
+</div>
+
+</div>
+
+<div class="project">
+
+<img src="images/project5.jpg" alt="School Project">
+
+<div class="project-info">
+
+<h3>School Rooftop Solar</h3>
+
+<p>Hardoi</p>
+
+</div>
+
+</div>
+
+<div class="project">
+
+<img src="images/project6.jpg" alt="Hospital Project">
+
+<div class="project-info">
+
+<h3>Hospital Solar Plant</h3>
 
 <p>Lucknow</p>
 
@@ -694,73 +844,7 @@ Cleaning, servicing and maintenance for better performance.
 
 </section>
 
-<!--================ BRANDS =================-->
-
-<section class="brands">
-
-<div class="container">
-
-<h2>Trusted Brands We Work With</h2>
-
-<div class="brand-grid">
-
-<div>Adani Solar</div>
-
-<div>Waaree</div>
-
-<div>Tata Power Solar</div>
-
-<div>Havells</div>
-
-<div>Polycab</div>
-
-<div>Deye</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!--================ CALL TO ACTION =================-->
-
-<section class="cta">
-
-<div class="container">
-
-<h2>
-
-Ready To Go Solar?
-
-</h2>
-
-<p>
-
-Call us today for a FREE site survey and quotation.
-
-</p>
-
-<div class="cta-buttons">
-
-<a href="tel:8423948053" class="primary-btn">
-
-📞 8423948053
-
-</a>
-
-<a href="https://wa.me/918423948053"
-
-class="secondary-btn">
-
-WhatsApp Now
-
-</a>
-
-</div>
-
-</div>
-
-</section><!--================ TESTIMONIALS =================-->
+<!--================ TESTIMONIALS =================-->
 
 <section class="testimonials">
 
@@ -770,36 +854,59 @@ WhatsApp Now
 
 <span>CLIENT REVIEWS</span>
 
-<h2>What Our Customers Say</h2>
+<h2>
+
+What Our Customers Say
+
+</h2>
 
 </div>
 
 <div class="testimonial-grid">
 
 <div class="review-card">
+
 ★★★★★
+
 <h3>Rohit Verma</h3>
+
 <p>
-Very professional installation and excellent service.
+
+Excellent installation and professional team.
 Highly recommended.
+
 </p>
+
 </div>
 
 <div class="review-card">
+
 ★★★★★
+
 <h3>Mohit Singh</h3>
+
 <p>
-The installation was completed on time.
-Great support from the team.
+
+Very satisfied with quality,
+installation and after-sales support.
+
 </p>
+
 </div>
 
 <div class="review-card">
+
 ★★★★★
+
 <h3>Anil Gupta</h3>
+
 <p>
-Very satisfied with the quality of products and service.
+
+Installation completed on time.
+Very good experience.
+
 </p>
+
 </div>
 
 </div>
@@ -818,16 +925,22 @@ Very satisfied with the quality of products and service.
 
 <span>SOLAR CALCULATOR</span>
 
-<h2>Estimate Your Savings</h2>
+<h2>
+
+Estimate Your Solar Savings
+
+</h2>
 
 </div>
 
 <div class="calculator-box">
 
-<input type="number"
-placeholder="Monthly Electricity Bill">
+<input
+type="number"
+id="bill"
+placeholder="Enter Monthly Electricity Bill">
 
-<select>
+<select id="type">
 
 <option>Residential</option>
 
@@ -837,17 +950,101 @@ placeholder="Monthly Electricity Bill">
 
 </select>
 
-<button>
+<button id="calculateBtn">
 
 Calculate
 
 </button>
 
-<div class="result">
+<div class="result" id="result">
 
 Estimated Solar Size : --
 
+<br>
+
 Estimated Savings : --
+
+</div>
+
+</div>
+
+</div>
+
+</section><!--================ FAQ =================-->
+
+<section id="faq" class="faq">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>FAQ</span>
+
+<h2>Frequently Asked Questions</h2>
+
+<p>Common questions about solar installation and subsidy.</p>
+
+</div>
+
+<div class="faq-list">
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+How much subsidy can I get?
+
+<i class="fas fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+Subsidy depends on the latest Government of India guidelines under the PM Surya Ghar Yojana and your system capacity.
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+How many years do solar panels last?
+
+<i class="fas fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+Quality Tier-1 solar panels generally have a performance warranty of up to 25 years.
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+Do you provide installation?
+
+<i class="fas fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+Yes. We provide complete EPC services including design, installation, net metering and after-sales support.
+</p>
+
+</div>
 
 </div>
 
@@ -865,39 +1062,29 @@ Estimated Savings : --
 
 <div class="contact-left">
 
-<h2>
-
-Request Free Site Survey
-
-</h2>
+<h2>Request Free Site Survey</h2>
 
 <p>
 
-Fill the form and our expert will contact you.
+Fill in your details and our solar expert will contact you shortly.
 
 </p>
 
 <form>
 
-<input type="text"
+<input type="text" placeholder="Full Name" required>
 
-placeholder="Your Name">
+<input type="tel" placeholder="Mobile Number" required>
 
-<input type="tel"
+<input type="email" placeholder="Email Address">
 
-placeholder="Mobile Number">
+<input type="text" placeholder="City">
 
-<input type="text"
+<textarea placeholder="Tell us about your requirement"></textarea>
 
-placeholder="City">
+<button type="submit" class="primary-btn">
 
-<textarea
-
-placeholder="Message"></textarea>
-
-<button>
-
-Submit
+Submit Request
 
 </button>
 
@@ -907,33 +1094,45 @@ Submit
 
 <div class="contact-right">
 
-<h2>
-
-Contact Information
-
-</h2>
+<h2>Contact Information</h2>
 
 <p>
 
-📞 8423948053
+<i class="fas fa-phone"></i>
+
+8423948053
 
 </p>
 
 <p>
 
-📞 9996801232
+<i class="fas fa-phone"></i>
+
+9996801232
 
 </p>
 
 <p>
 
-📍 Lakhimpur Kheri, Uttar Pradesh
+<i class="fas fa-envelope"></i>
+
+info@awadhgreendevelopers.in
 
 </p>
 
 <p>
 
-Serving 45+ Cities Across Uttar Pradesh
+<i class="fas fa-location-dot"></i>
+
+Lakhimpur Kheri, Uttar Pradesh
+
+</p>
+
+<p>
+
+<i class="fas fa-clock"></i>
+
+Mon - Sat : 9:00 AM – 6:00 PM
 
 </p>
 
@@ -953,237 +1152,19 @@ Serving 45+ Cities Across Uttar Pradesh
 
 <div>
 
-<h3>
-
-Awadh Green Developers
-
-</h3>
-
-<p>
-
-Professional Solar EPC Company
-
-Providing Residential,
-
-Commercial,
-
-Industrial Solar Solutions.
-
-</p>
-
-</div>
-
-<div>
-
-<h3>
-
-Quick Links
-
-</h3>
-
-<ul>
-
-<li><a href="#">Home</a></li>
-
-<li><a href="#about">About</a></li>
-
-<li><a href="#services">Services</a></li>
-
-<li><a href="#projects">Projects</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</div>
-
-<div>
-
-<h3>
-
-Services
-
-</h3>
-
-<ul>
-
-<li>On Grid Solar</li>
-
-<li>Hybrid Solar</li>
-
-<li>Commercial Solar</li>
-
-<li>Industrial Solar</li>
-
-<li>PM Surya Ghar</li>
-
-</ul>
-
-</div>
-
-<div>
-
-<h3>
-
-Contact
-
-</h3>
-
-<p>8423948053</p>
-
-<p>9996801232</p>
-
-<p>Lakhimpur Kheri</p>
-
-</div>
-
-</div>
-
-<hr>
-
-<div class="copyright">
-
-© 2026 Awadh Green Developers.
-
-All Rights Reserved.
-
-</div>
-
-</div>
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-    <!-- Loader -->
-<div class="loader">
-    <div class="loader-ring"></div>
-</div>
-
-<!-- Mobile Menu Button -->
-<div class="menu-btn">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
-
-<!-- Scroll To Top -->
-<button class="scroll-top">
-    <i class="fas fa-arrow-up"></i>
-</button>
-
-</html>
-<!-- =========================
-FAQ SECTION
-========================== -->
-<section class="faq-section" id="faq">
-    <div class="container">
-
-        <div class="section-title">
-            <span>FAQ</span>
-            <h2>Frequently Asked Questions</h2>
-            <p>Everything you need to know before installing solar.</p>
-        </div>
-
-        <div class="faq">
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    How much subsidy can I get?
-                    <i class="fas fa-plus"></i>
-                </button>
-                <div class="faq-answer">
-                    Residential customers can receive government subsidy as per the latest PM Surya Ghar Yojana guidelines. Our team handles the complete subsidy process.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    Is EMI Available?
-                    <i class="fas fa-plus"></i>
-                </button>
-                <div class="faq-answer">
-                    Yes. Easy EMI and finance options are available through partner banks and NBFCs.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    How many years does a solar system last?
-                    <i class="fas fa-plus"></i>
-                </button>
-                <div class="faq-answer">
-                    Solar panels generally last 25–30 years with very low maintenance.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    How long does installation take?
-                    <i class="fas fa-plus"></i>
-                </button>
-                <div class="faq-answer">
-                    Normally within 1–3 days after all approvals are completed.
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- =========================
-CALL TO ACTION
-========================== -->
-
-<section class="cta-section">
-
-    <div class="container">
-
-        <h2>Start Saving with Solar Today</h2>
-
-        <p>
-            Get Free Site Survey, Free Consultation &
-            Government Subsidy Assistance.
-        </p>
-
-        <a href="tel:+919996801232" class="btn-primary">
-            Call Now
-        </a>
-
-        <a href="https://wa.me/919996801232"
-           class="btn-outline">
-            WhatsApp
-        </a>
-
-    </div>
-
-</section>
-
-<!-- =========================
-FOOTER
-========================== -->
-
-<footer>
-
-<div class="container footer-grid">
-
-<div>
-
 <h3>Awadh Green Developers</h3>
 
 <p>
-Trusted Solar EPC Company providing
-Residential, Commercial and Industrial Solar
-Solutions across Uttar Pradesh.
+
+Providing reliable Residential, Commercial and Industrial Solar EPC solutions across Uttar Pradesh.
+
 </p>
 
 </div>
 
 <div>
 
-<h4>Quick Links</h4>
+<h3>Quick Links</h3>
 
 <ul>
 
@@ -1203,19 +1184,19 @@ Solutions across Uttar Pradesh.
 
 <div>
 
-<h4>Services</h4>
+<h3>Our Services</h3>
 
 <ul>
 
-<li>On Grid Solar</li>
+<li>Residential Solar</li>
+
+<li>Commercial Solar</li>
+
+<li>Industrial Solar</li>
 
 <li>Hybrid Solar</li>
 
-<li>Off Grid Solar</li>
-
-<li>Solar Water Pump</li>
-
-<li>Solar Street Light</li>
+<li>PM Surya Ghar Assistance</li>
 
 </ul>
 
@@ -1223,35 +1204,58 @@ Solutions across Uttar Pradesh.
 
 <div>
 
-<h4>Contact</h4>
+<h3>Follow Us</h3>
 
-<p>
+<div class="social-links">
 
-📞 +91 9996801232
+<a href="#"><i class="fab fa-facebook-f"></i></a>
 
-</p>
+<a href="#"><i class="fab fa-instagram"></i></a>
 
-<p>
+<a href="#"><i class="fab fa-youtube"></i></a>
 
-✉ info@awadhgreendevelopers.in
-
-</p>
-
-<p>
-
-📍 Lakhimpur Kheri, Uttar Pradesh
-
-</p>
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
 
 </div>
 
 </div>
+
+</div>
+
+<hr>
 
 <div class="copyright">
 
-© 2026 Awadh Green Developers.
-All Rights Reserved.
+© 2026 Awadh Green Developers. All Rights Reserved.
+
+</div>
 
 </div>
 
 </footer>
+
+<!-- Floating Buttons -->
+
+<a href="https://wa.me/918423948053" class="whatsapp-float">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<a href="tel:+918423948053" class="call-float">
+
+<i class="fas fa-phone"></i>
+
+</a>
+
+<button class="scroll-top">
+
+<i class="fas fa-arrow-up"></i>
+
+</button>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,1 +1,1 @@
-V6 update
+Upload these files to GitHub Pages repository.

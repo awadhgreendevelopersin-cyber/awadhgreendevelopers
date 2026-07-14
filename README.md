@@ -1,1 +1,1 @@
-Version 2 Part 1. Replace existing index.html, style.css, script.js.
+Replace your existing index.html, style.css and script.js with these files.

@@ -1,1 +1,1 @@
-Replace existing files. Logo included as logo.webp.
+Replace existing files and upload logo.webp

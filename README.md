@@ -1,1 +1,1 @@
-Replace your existing index.html, style.css and script.js with these files.
+Replace existing files. Logo included as logo.webp.

@@ -1,12 +1,10 @@
-*{box-sizing:border-box}body{margin:0;font-family:Poppins,sans-serif;background:#081b2f;color:#fff}
-.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:#06111f;position:sticky;top:0}
-.nav a{color:#fff;text-decoration:none;margin-left:12px}
-.hero{height:85vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=80') center/cover;display:flex;align-items:center;justify-content:center;text-align:center}
-.overlay h1{font-size:48px;max-width:900px}
-.btn{display:inline-block;margin-top:20px;padding:14px 28px;background:#ff8c00;color:#fff;text-decoration:none;border-radius:8px}
-.why,.stats{padding:60px 20px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:#123456;padding:25px;border-radius:14px}
-.stats{display:flex;justify-content:space-around;flex-wrap:wrap;background:#0d2742}
-.float{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:14px 18px;border-radius:30px;text-decoration:none}
-footer{text-align:center;padding:25px;background:#06111f}
+body{margin:0;font-family:Arial,sans-serif;background:#071b2e;color:#fff}
+header{display:flex;justify-content:space-between;align-items:center;padding:15px 25px;background:#08111d}
+.brand{display:flex;align-items:center;gap:10px}.logo{width:56px;height:56px;border-radius:50%}
+nav a{margin:0 10px}
+.hero{height:85vh;background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.55)),url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80') center/cover;display:flex;align-items:center;justify-content:center}
+.glass{background:rgba(0,0,0,.35);padding:40px;border-radius:18px;text-align:center;backdrop-filter:blur(8px)}
+.btn{display:inline-block;background:#ff8c00;color:#fff;padding:14px 26px;border-radius:8px;text-decoration:none}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;padding:40px}
+.card{background:#12385b;padding:25px;border-radius:14px;text-align:center}
+footer{text-align:center;padding:20px;background:#08111d}

@@ -1,355 +1,678 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWADH GREEN DEVELOPERS - Premium Solar Energy Solutions</title>
+    <style>
+        /* CSS Reset & Core Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
 
-<title>Awadh Green Developers | Solar EPC Company</title>
+        :root {
+            --primary: #0056b3; /* Tata Blue Vibe */
+            --secondary: #28a745; /* Eco-Friendly Green for Awadh Green */
+            --accent: #ffc107; /* Solar Yellow */
+            --dark: #222222;
+            --light: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        /* Top Info Bar */
+        .top-bar {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 8px 20px;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-bar-info span {
+            margin-right: 20px;
+        }
 
-<link rel="stylesheet" href="style.css">
+        /* Navigation */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
 
+        /* Logo Area - Capital Letters & Highlighted Brand */
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            font-size: 28px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .logo-text .brand-main {
+            color: var(--primary);
+            font-size: 20px;
+        }
+
+        .logo-text .brand-sub {
+            color: var(--secondary);
+            font-size: 15px;
+            letter-spacing: 2.5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+
+        .nav-btn {
+            background-color: var(--primary);
+            color: var(--white) !important;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: background 0.3s !important;
+        }
+
+        .nav-btn:hover {
+            background-color: #003d82;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 50, 110, 0.75), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 52px;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .hero-content p {
+            font-size: 22px;
+            margin-bottom: 35px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 14px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #e0a800;
+            transform: translateY(-2px);
+        }
+
+        /* Sections Structure */
+        section {
+            padding: 90px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: var(--primary);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 4px;
+            background-color: var(--secondary);
+            margin: 12px auto 0;
+        }
+
+        /* Services / Products Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            border-top: 5px solid var(--secondary);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card-icon {
+            font-size: 45px;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-size: 22px;
+        }
+
+        /* Smart Solar Calculator Section */
+        .calculator-section {
+            background-color: var(--light);
+        }
+
+        .calc-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .calc-box input {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            outline: none;
+        }
+
+        .calc-box input:focus {
+            border-color: var(--primary);
+        }
+
+        .calc-results {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px dashed #ddd;
+            display: none;
+        }
+
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            font-size: 18px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .result-item strong {
+            color: var(--primary);
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--light);
+            margin-bottom: 15px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            padding: 20px;
+            background: #f1f3f5;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: var(--white);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 200px;
+        }
+
+        /* Contact Form */
+        .contact-section {
+            background-color: var(--light);
+        }
+
+        .contact-container {
+            max-width: 650px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 45px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: #b3b3b3;
+            padding: 50px 20px 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 18px;
+            position: relative;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: var(--secondary);
+            margin-top: 5px;
+        }
+
+        .footer-col p, .footer-col ul {
+            list-style: none;
+            font-size: 14px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #b3b3b3;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        /* Responsive UI */
+        @media (max-width: 768px) {
+            .top-bar { display: none; }
+            .nav-container { flex-direction: column; text-align: center; }
+            nav ul { margin-top: 20px; flex-wrap: wrap; justify-content: center; }
+            nav ul li { margin: 10px; }
+            .hero-content h1 { font-size: 34px; }
+            .hero-content p { font-size: 18px; }
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-
-<div class="logo">
-
-<img src="images/logo.png" alt="Awadh Green Developers">
-
-<div>
-
-<h2>Awadh Green Developers</h2>
-
-<p>Powering Your Future</p>
-
-</div>
-
-</div>
-
-<nav>
-
-<a href="#">Home</a>
-
-<a href="#">About</a>
-
-<a href="#">Services</a>
-
-<a href="#">Projects</a>
-
-<a href="#">Calculator</a>
-
-<a href="#">Gallery</a>
-
-<a href="#">Contact</a>
-
-</nav>
-
-<div class="header-btn">
-
-<a href="tel:+918423948053" class="call-btn">
-
-<i class="fa-solid fa-phone"></i>
-
-Call Now
-
-</a>
-
-<a href="https://wa.me/918423948053" class="wa-btn">
-
-<i class="fa-brands fa-whatsapp"></i>
-
-WhatsApp
-
-</a>
-
-</div>
-
-</header>
-
-<section class="hero">
-
-<div class="overlay"></div>
-
-<div class="hero-content">
-
-<span>TRUSTED SOLAR EPC COMPANY</span>
-
-<h1>
-
-Power Your Home With
-
-<span>Clean Solar Energy</span>
-
-</h1>
-
-<p>
-
-Awadh Green Developers provides Premium Residential,
-
-Commercial and Industrial Solar Solutions with complete
-
-installation, subsidy assistance and after-sales support.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="#contact" class="primary-btn">
-
-Get Free Survey
-
-</a>
-
-<a href="#calculator" class="secondary-btn">
-
-Calculate Savings
-
-</a>
-
-</div>
-
-<div class="hero-stats">
-
-<div>
-
-<h2>500+</h2>
-
-<p>Installations</p>
-
-</div>
-
-<div>
-
-<h2>25 Years</h2>
-
-<p>Panel Warranty</p>
-
-</div>
-
-<div>
-
-<h2>10MW+</h2>
-
-<p>Installed Capacity</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<script src="script.js"></script>
-
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="top-bar-info">
+            <span>📞 Toll-Free: 1800-XXX-XXXX</span>
+            <span>✉️ info@awadhgreendevelopers.com</span>
+        </div>
+        <div>🇮🇳 Building a Green India</div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="nav-container">
+            <!-- Professional Logo Design with Leaf Icon in Capital Letters -->
+            <a href="#home" class="logo">
+                <span class="logo-icon">🌱</span>
+                <span class="logo-text">
+                    <strong class="brand-main">AWADH GREEN</strong>
+                    <span class="brand-sub">DEVELOPERS</span>
+                </span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Products & Services</a></li>
+                    <li><a href="#calculator">Solar Calculator</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                    <li><a href="#contact" class="nav-btn">Get Quote</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+        <div class="hero-content">
+            <h1>AWADH GREEN DEVELOPERS</h1>
+            <p>Desh Ki Chhat, Desh Ka Power! Apne ghar aur business ko switch karein premium solar energy par.</p>
+            <a href="#calculator" class="btn">Apna Solar Bill Calculate Karein</a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Humare Baare Mein</h2>
+            <div style="text-align: center; max-width: 900px; margin: 0 auto; font-size: 18px; color: #555;">
+                <p style="margin-bottom: 20px;"><strong>AWADH GREEN DEVELOPERS</strong> swachh aur sasti urja ko har ghar aur vyapar tak pahunchane ke liye pratibadh hai. Hum certified solar engineers ke sath premium quality solar panels design, install, aur maintain karte hain.</p>
+                <p>Humara lakshya na sirf aapka electricity bill kam karna hai, balki aanewali peedhiyon ke liye ek behad saaf aur hara-bhara paryavaran chhodna bhi hai.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" style="background-color: var(--light);">
+        <div class="container">
+            <h2 class="section-title">Humare Products & Services</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🏠</div>
+                    <h3>On-Grid Solar System</h3>
+                    <p>Gharon ke liye sabse best. Grid se connect rehta hai aur extra bijli sarkar ko bech kar credit paayein.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔋</div>
+                    <h3>Off-Grid Solar System</h3>
+                    <p>Batteries ke sath aane wala system, jo power cuts wale areas me 24/7 backup ki guarantee deta hai.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏢</div>
+                    <h3>Commercial Roof-Top</h3>
+                    <p>Factories aur Corporate offices ke bade panels jo tax benefits aur heavy load management me madadgaar hain.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🌾</div>
+                    <h3>Solar Water Pumps</h3>
+                    <p>Kisanon ke liye sacha sathi. Din me bina rukavat ke kheti ki sinchai ke liye behtareen pumps.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">☀️</div>
+                    <h3>Solar Water Heaters</h3>
+                    <p>Sardiyo me paani garam karne ke liye bina bijli kharch kiye sabse sasta aur durable option.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🛠️</div>
+                    <h3>Maintenance & AMC</h3>
+                    <p>Aapke panels ki professional cleaning, performance checks aur regular maintenance services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Solar Calculator Section -->
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <h2 class="section-title">Smart Solar ROI Calculator</h2>
+            <div class="calc-container">
+                <div class="calc-box">
+                    <label for="billInput" style="font-weight: bold; font-size: 16px;">Aapka Monthly Bijli Ka Bill (₹ me daalein):</label>
+                    <input type="number" id="billInput" placeholder="E.g. 4000" min="0">
+                    <button class="btn" style="width: 100%;" onclick="calculateSolar()">Calculate Now</button>
+                </div>
+
+                <div class="calc-results" id="calcResults">
+                    <h3>📊 Aapke Liye Recommended Setup:</h3>
+                    <div class="result-item">
+                        <span>Required Solar Plant Size:</span>
+                        <strong id="resSize">0 kW</strong>
+                    </div>
+                    <div class="result-item">
+                        <span>Estimate Space Needed:</span>
+                        <strong id="resSpace">0 Sq. Ft.</strong>
+                    </div>
+                    <div class="result-item">
+                        <span>Approx. Investment Cost:</span>
+                        <strong id="resCost">₹ 0</strong>
+                    </div>
+                    <div class="result-item">
+                        <span>Estimated Yearly Savings:</span>
+                        <strong id="resSavings" style="color: #28a745;">₹ 0</strong>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 13px; color: #666; text-align: center;">*Yeh ek anumaanit calculation hai. Subsidy aur actual site survey ke baad prices badal sakte hain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">1. Kya solar panels par Govt Subsidy milti hai? <span>+</span></div>
+                    <div class="faq-answer">
+                        <p>Haan, PM Surya Ghar Muft Bijli Yojana ke tahat residential gharon par sarkar dwara bhari subsidy di ja rahi hai, jisse aapki investment cost bohot kam ho jaati hai.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">2. Solar panels ki life kitni hoti hai? <span>+</span></div>
+                    <div class="faq-answer">
+                        <p>Uchh quality wale Solar panels ki performance warranty 25 saal tak hoti hai, aur ye uske baad bhi kaam karte rehte hain.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">3. Kya baarish ya badal hone par solar kaam karta hai? <span>+</span></div>
+                    <div class="faq-answer">
+                        <p>Baarish ya badal me production thodi kam ho jaati hai par band nahi hoti. On-Grid system me aap bachi hui power grid se le sakte hain, isliye bijli kabhi band nahi hoti.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Free Consultation Form</h2>
+            <div class="contact-container">
+                <form action="#" method="POST" onsubmit="alert('Thank you! Awadh Green Developers team aapse jald hi sampark karegi.'); return false;">
+                    <div class="form-group">
+                        <label for="name">Aapka Naam</label>
+                        <input type="text" id="name" required placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Mobile Number</label>
+                        <input type="tel" id="phone" required placeholder="10-digit number">
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Connection Type</label>
+                        <select id="type" style="width: 100%; padding: 14px; border: 1px solid #ccc; border-radius: 4px;">
+                            <option>Residential (Ghar ke liye)</option>
+                            <option>Commercial (Factory/Office)</option>
+                            <option>Agricultural (Kheti ke liye)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Get Free Site Survey</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4 style="color: var(--secondary)">AWADH GREEN DEVELOPERS</h4>
+                <p style="margin-top: 15px;">Bharat ko atmanirbhar aur green banane ki disha me ek agrasar kadam. Premium quality solar installations aur modern structural development.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#calculator">Solar Calculator</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Humara Office</h4>
+                <p>102, Green Energy Hub, Awadh Business Park,<br>Lucknow, Uttar Pradesh - 226001</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 AWADH GREEN DEVELOPERS. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Features Implementation -->
+    <script>
+        // Solar ROI Calculator Logic
+        function calculateSolar() {
+            const bill = parseFloat(document.getElementById('billInput').value);
+            if (!bill || bill <= 0) {
+                alert("Kripya ek valid bill amount enter karein.");
+                return;
+            }
+
+            // Standard Solar Logic
+            const units = bill / 8; 
+            const kwRequired = Math.ceil(units / 120); 
+            const spaceNeeded = kwRequired * 100; // 100 sq ft per kW
+            const estimatedCost = kwRequired * 60000; // approx 60k per kW standard price
+            const yearlySavings = bill * 12 * 0.90; // approx 90% savings on bill
+
+            // Dynamic UI updates
+            document.getElementById('resSize').innerText = kwRequired + " kW";
+            document.getElementById('resSpace').innerText = spaceNeeded + " Sq. Ft.";
+            document.getElementById('resCost').innerText = "₹ " + estimatedCost.toLocaleString('en-IN');
+            document.getElementById('resSavings').innerText = "₹ " + Math.round(yearlySavings).toLocaleString('en-IN');
+            
+            // Show Results Div
+            document.getElementById('calcResults').style.display = 'block';
+        }
+
+        // Accordion FAQ Interactive Logic
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(i => i.classList.remove('active'));
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-<!-- =========================
-        ABOUT SECTION
-========================= -->
-
-<section class="about" id="about">
-
-<div class="about-image">
-<img src="images/about.jpg" alt="Solar Installation">
-</div>
-
-<div class="about-content">
-
-<span>ABOUT AWADH GREEN DEVELOPERS</span>
-
-<h2>Leading Solar EPC Company In Uttar Pradesh</h2>
-
-<p>
-
-Awadh Green Developers is committed to delivering high-quality
-solar energy solutions for residential, commercial and industrial
-customers. We provide complete services from survey and design
-to installation, net metering and after-sales support.
-
-</p>
-
-<div class="about-boxes">
-
-<div class="box">
-<i class="fa-solid fa-solar-panel"></i>
-<h3>500+</h3>
-<p>Projects Completed</p>
-</div>
-
-<div class="box">
-<i class="fa-solid fa-users"></i>
-<h3>100%</h3>
-<p>Customer Satisfaction</p>
-</div>
-
-<div class="box">
-<i class="fa-solid fa-award"></i>
-<h3>25 Years</h3>
-<p>Performance Warranty</p>
-</div>
-
-</div>
-
-<a href="#contact" class="primary-btn">
-Request Free Survey
-</a>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-        SERVICES
-========================= -->
-
-<section class="services" id="services">
-
-<div class="title">
-
-<span>OUR SERVICES</span>
-
-<h2>Complete Solar Solutions</h2>
-
-</div>
-
-<div class="service-grid">
-
-<div class="service-card">
-
-<i class="fa-solid fa-house"></i>
-
-<h3>Residential Solar</h3>
-
-<p>
-
-Affordable rooftop solar systems with subsidy support.
-
-</p>
-
-</div>
-
-<div class="service-card">
-
-<i class="fa-solid fa-building"></i>
-
-<h3>Commercial Solar</h3>
-
-<p>
-
-Reduce electricity bills for shops, factories and offices.
-
-</p>
-
-</div>
-
-<div class="service-card">
-
-<i class="fa-solid fa-bolt"></i>
-
-<h3>Hybrid Solar</h3>
-
-<p>
-
-Power backup with battery and solar generation.
-
-</p>
-
-</div>
-
-<div class="service-card">
-
-<i class="fa-solid fa-screwdriver-wrench"></i>
-
-<h3>Installation & Maintenance</h3>
-
-<p>
-
-Professional installation and long-term maintenance support.
-
-</p>
-
-</div>
-
-</div>
-
-<!-- =========================
-        SOLAR CALCULATOR
-========================= -->
-
-<section class="calculator" id="calculator">
-
-<div class="title">
-<span>SOLAR SAVINGS</span>
-<h2>Solar Savings Calculator</h2>
-<p>Enter your monthly electricity bill.</p>
-</div>
-
-<div class="calc-box">
-
-<input type="number" id="bill"
-placeholder="Monthly Electricity Bill (₹)">
-
-<button onclick="calculateSolar()">
-Calculate Savings
-</button>
-
-<div class="result">
-
-<p><strong>Recommended Plant:</strong>
-<span id="kw">--</span></p>
-
-<p><strong>Estimated Cost:</strong>
-₹ <span id="cost">--</span></p>
-
-<p><strong>Government Subsidy:</strong>
-₹ <span id="subsidy">--</span></p>
-
-<p><strong>Estimated Monthly Saving:</strong>
-₹ <span id="saving">--</span></p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-      BRAND PARTNERS
-========================= -->
-
-<section class="brands">
-
-<div class="title">
-<span>OUR PARTNERS</span>
-<h2>Trusted Brands</h2>
-</div>
-
-<div class="brand-grid">
-
-<img src="images/tata.png" alt="Tata">
-
-<img src="images/waaree.png" alt="Waaree">
-
-<img src="images/havells.png" alt="Havells">
-
-<img src="images/polycab.png" alt="Polycab">
-
-<img src="images/utl.png" alt="UTL">
-
-</div>
-
-</section>
-
-</section>
